@@ -96,7 +96,7 @@ export default function FacultyDetailPage({
                       <div className="flex items-start justify-between mb-3">
                         <h3 className="font-semibold text-gray-900 dark:text-white">{program.name}</h3>
                         <span className={`px-2 py-0.5 text-xs font-bold rounded ${
-                          program.accreditation === 'A' 
+                          program.accreditation === 'Unggul' 
                             ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' 
                             : 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
                         }`}>
