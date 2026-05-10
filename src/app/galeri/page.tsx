@@ -170,7 +170,7 @@ export default function GaleriPage() {
     <source
       src={
   filteredGallery[lightbox.index].type === 'video'
-    ? filteredGallery[lightbox.index].video
+    ? (filteredGallery[lightbox.index] as any).video
     : ''
 }
       type="video/mp4"
@@ -179,8 +179,8 @@ export default function GaleriPage() {
 ) : (
   <img
     src={
-      filteredGallery[lightbox.index].image ||
-      filteredGallery[lightbox.index].thumbnail
+      (filteredGallery[lightbox.index] as any).image ||
+(filteredGallery[lightbox.index] as any).thumbnail
     }
     alt={filteredGallery[lightbox.index].title}
     className="max-h-[70vh] w-auto rounded-lg"

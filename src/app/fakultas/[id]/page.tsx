@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowLeft, Users, BookOpen, Award, Star, CheckCircle } from 'lucide-react'
 import { faculties } from '@/data/dummyData'
@@ -37,9 +36,7 @@ export default function FacultyDetailPage({
             <ArrowLeft className="w-4 h-4" />
             Kembali ke Fakultas
           </Link>
-          <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
+          <div
 >
             <span className="inline-block px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-lg mb-4">
               {faculty.short}
@@ -48,7 +45,7 @@ export default function FacultyDetailPage({
               {faculty.name}
             </h1>
             <p className="text-lg text-white/80 max-w-2xl">{faculty.description}</p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -118,17 +115,13 @@ export default function FacultyDetailPage({
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Prestasi Fakultas</h2>
               <div className="space-y-4">
                 {faculty.achievements.map((achievement, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
                     className="flex items-start gap-4 bg-gray-50 dark:bg-gray-900 rounded-xl p-4 border border-gray-100 dark:border-gray-800"
                   >
                     <CheckCircle className="w-5 h-5 text-uin-primary shrink-0 mt-0.5" />
                     <span className="text-gray-700 dark:text-gray-300">{achievement}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </section>
