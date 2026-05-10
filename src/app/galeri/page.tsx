@@ -98,7 +98,7 @@ export default function GaleriPage() {
   </video>
 ) : (
   <img
-    src={'image' in item ? item.image : item.thumbnail}
+    src={item.image}
     alt={item.title}
     className="w-full h-full object-cover"
   />
