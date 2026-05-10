@@ -168,7 +168,11 @@ export default function GaleriPage() {
     className="max-h-[70vh] w-auto rounded-lg"
   >
     <source
-      src={filteredGallery[lightbox.index].video}
+      src={
+  filteredGallery[lightbox.index].type === 'video'
+    ? filteredGallery[lightbox.index].video
+    : ''
+}
       type="video/mp4"
     />
   </video>
